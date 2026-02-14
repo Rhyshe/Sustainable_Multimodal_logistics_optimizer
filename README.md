@@ -11,7 +11,7 @@ Sustainable freight optimization system for India's MMLP network | 60-90% cost s
 
 A **production-grade optimization system** for sustainable multi-modal freight transport across India's MMLP (Multi-Modal Logistics Park) network. Achieves **60-90% cost savings** and **70-80% CO₂ reduction** vs road-only transport.
 
-![Dashboard Overview](images/dashboard_overview.png)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sustainablemultimodallogisticsoptimizer-vrsec7xemnrwzzsld5z2bb.streamlit.app/)
 
 ---
 
