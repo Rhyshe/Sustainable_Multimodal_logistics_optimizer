@@ -5,22 +5,26 @@ from optimizer_engine import calculate_shipment_optimized, mmlps, G, vehicle_typ
 
 import sys
 import subprocess
-
-# Debug: Show installed packages
-print("📦 INSTALLED PACKAGES:")
-subprocess.call([sys.executable, "-m", "pip", "list"])
-
-# Debug: Show if requirements.txt exists
 import os
-print(f"\n📁 Current directory: {os.getcwd()}")
-print(f"Files: {os.listdir('.')}")
-if 'requirements.txt' in os.listdir('.'):
-    print("✅ requirements.txt found!")
-    with open('requirements.txt', 'r') as f:
-        print(f.read())
-else:
-    print("❌ requirements.txt NOT found!")
 
+print("="*50)
+print("🔍 DEBUG INFORMATION")
+print("="*50)
+print(f"Python version: {sys.version}")
+print(f"Current directory: {os.getcwd()}")
+print(f"Files in directory: {os.listdir('.')}")
+
+# Try to import networkx
+try:
+    import networkx
+    print(f"✅ NetworkX found! Version: {networkx.__version__}")
+except ImportError as e:
+    print(f"❌ NetworkX import failed: {e}")
+    
+    # List installed packages
+    print("\n📦 Installed packages:")
+    subprocess.call([sys.executable, "-m", "pip", "list"])
+print("="*50)
 
 
 # ========== PAGE CONFIG ==========
@@ -277,4 +281,5 @@ elif st.session_state.page == 'Cost & Emissions':
     st.switch_page("pages/3_💰_Cost_&_Emissions.py")
 elif st.session_state.page == 'Detailed':
     st.switch_page("pages/4_📋_Detailed_Breakdown.py")
+
 
