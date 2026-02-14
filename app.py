@@ -3,6 +3,26 @@ import pandas as pd
 import numpy as np
 from optimizer_engine import calculate_shipment_optimized, mmlps, G, vehicle_types, default_vehicles
 
+import sys
+import subprocess
+
+# Debug: Show installed packages
+print("📦 INSTALLED PACKAGES:")
+subprocess.call([sys.executable, "-m", "pip", "list"])
+
+# Debug: Show if requirements.txt exists
+import os
+print(f"\n📁 Current directory: {os.getcwd()}")
+print(f"Files: {os.listdir('.')}")
+if 'requirements.txt' in os.listdir('.'):
+    print("✅ requirements.txt found!")
+    with open('requirements.txt', 'r') as f:
+        print(f.read())
+else:
+    print("❌ requirements.txt NOT found!")
+
+
+
 # ========== PAGE CONFIG ==========
 st.set_page_config(page_title="Multi-Modal Logistics Optimizer", page_icon="🚗", layout="wide")
 
@@ -257,3 +277,4 @@ elif st.session_state.page == 'Cost & Emissions':
     st.switch_page("pages/3_💰_Cost_&_Emissions.py")
 elif st.session_state.page == 'Detailed':
     st.switch_page("pages/4_📋_Detailed_Breakdown.py")
+
