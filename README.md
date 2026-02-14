@@ -175,7 +175,5 @@ score = (w_cost * cost_norm +
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-- PM Gati Shakti Initiative, Ministry of Commerce & Industry
-- Indian Railways, Inland Waterways Authority of India
+
 - [Research Paper Reference](https://www.mdpi.com/2071-1050/14/18/11577)
